@@ -23,10 +23,11 @@ square.vertices.push( new THREE.Vector3( 20, -20, 0 ));
 
 square.faces.push( new THREE.Face4(0, 1, 2, 3) );   
 
-var material = new THREE.MeshBasicMaterial({color: 0xffffff}); 
+var triangleMaterial = new THREE.MeshBasicMaterial({color: 0xffffff});
+var squareMaterial = new THREE.MeshBasicMaterial({color: 0x7f7fff}); 
 
-var triangleMesh = new THREE.Mesh( triangle, material );
-var squareMesh = new THREE.Mesh( square, material );
+var triangleMesh = new THREE.Mesh( triangle, triangleMaterial );
+var squareMesh = new THREE.Mesh( square, squareMaterial );
 
 triangleMesh.position.x = -25;
 squareMesh.position.x = 25;           
